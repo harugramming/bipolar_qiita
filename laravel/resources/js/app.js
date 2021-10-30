@@ -1,6 +1,5 @@
 import './bootstrap'
 import $ from 'jquery'
-import './tabs'
 import Vue from 'vue'
 import ArticleLike from './components/ArticleLike'
 import FollowButton from './components/FollowButton'

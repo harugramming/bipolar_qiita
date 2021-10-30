@@ -13,23 +13,12 @@
   </div>
   @endguest
   <div id="main-container">
-    <div class='tabs'>
-        <div class='tab-buttons'>
-          <span class='content1'>Button 1</span>
-          <span class='content2'>Button 2</span>
-          <span class='content3'>Button 3</span>
-          <div id='lamp' class='content1'></div>
-        </div>
-        <div class='tab-content'>
-
-            <div class="container　content1">
-                テスト
-                @foreach($articles as $article)
-                @include('articles.card')
-                @endforeach
-            </div>
-        </div>
+    <div class="container">
+        @foreach($articles as $article)
+        @include('articles.card')
+        @endforeach
     </div>
+</div>
 
   </div>
 

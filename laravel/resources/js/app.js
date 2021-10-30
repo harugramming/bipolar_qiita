@@ -1,5 +1,4 @@
 import './bootstrap'
-import './tabs'
 import $ from 'jquery'
 import Vue from 'vue'
 import ArticleLike from './components/ArticleLike'

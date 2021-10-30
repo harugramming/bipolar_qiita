@@ -43797,25 +43797,22 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tabs */ "./resources/js/tabs.js");
-/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_ArticleLike__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ArticleLike */ "./resources/js/components/ArticleLike.vue");
-/* harmony import */ var _components_FollowButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/FollowButton */ "./resources/js/components/FollowButton.vue");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_ArticleLike__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ArticleLike */ "./resources/js/components/ArticleLike.vue");
+/* harmony import */ var _components_FollowButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FollowButton */ "./resources/js/components/FollowButton.vue");
 
 
 
 
 
-
-var app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({
+var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
   el: '#app',
   components: {
-    ArticleLike: _components_ArticleLike__WEBPACK_IMPORTED_MODULE_4__["default"],
-    FollowButton: _components_FollowButton__WEBPACK_IMPORTED_MODULE_5__["default"]
+    ArticleLike: _components_ArticleLike__WEBPACK_IMPORTED_MODULE_3__["default"],
+    FollowButton: _components_FollowButton__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 
@@ -43988,17 +43985,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FollowButton_vue_vue_type_template_id_426ba0ae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/tabs.js":
-/*!******************************!*\
-  !*** ./resources/js/tabs.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /var/www/html/resources/js/tabs.js: 'return' outside of function. (2:6)\n\n\u001b[0m \u001b[90m 1 |\u001b[39m \u001b[36mif\u001b[39m (location\u001b[33m.\u001b[39mhash \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m) $(\u001b[32m'a[href=\"'\u001b[39m \u001b[33m+\u001b[39m location\u001b[33m.\u001b[39mhash \u001b[33m+\u001b[39m \u001b[32m'\"]'\u001b[39m)\u001b[33m.\u001b[39mtab(\u001b[32m'show'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 2 |\u001b[39m       \u001b[36mreturn\u001b[39m $(\u001b[32m'a[data-toggle=\"tab\"]'\u001b[39m)\u001b[33m.\u001b[39mon(\u001b[32m'shown'\u001b[39m\u001b[33m,\u001b[39m \u001b[36mfunction\u001b[39m(e) {\u001b[0m\n\u001b[0m \u001b[90m   |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 3 |\u001b[39m       \u001b[36mreturn\u001b[39m location\u001b[33m.\u001b[39mhash \u001b[33m=\u001b[39m $(e\u001b[33m.\u001b[39mtarget)\u001b[33m.\u001b[39mattr(\u001b[32m'href'\u001b[39m)\u001b[33m.\u001b[39msubstr(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 4 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 5 |\u001b[39m\u001b[0m\n    at Parser._raise (/var/www/html/node_modules/@babel/parser/lib/index.js:541:17)\n    at Parser.raiseWithData (/var/www/html/node_modules/@babel/parser/lib/index.js:534:17)\n    at Parser.raise (/var/www/html/node_modules/@babel/parser/lib/index.js:495:17)\n    at Parser.parseReturnStatement (/var/www/html/node_modules/@babel/parser/lib/index.js:13509:12)\n    at Parser.parseStatementContent (/var/www/html/node_modules/@babel/parser/lib/index.js:13189:21)\n    at Parser.parseStatement (/var/www/html/node_modules/@babel/parser/lib/index.js:13139:17)\n    at Parser.parseBlockOrModuleBlockBody (/var/www/html/node_modules/@babel/parser/lib/index.js:13728:25)\n    at Parser.parseBlockBody (/var/www/html/node_modules/@babel/parser/lib/index.js:13719:10)\n    at Parser.parseProgram (/var/www/html/node_modules/@babel/parser/lib/index.js:13061:10)\n    at Parser.parseTopLevel (/var/www/html/node_modules/@babel/parser/lib/index.js:13052:25)\n    at Parser.parse (/var/www/html/node_modules/@babel/parser/lib/index.js:14800:10)\n    at parse (/var/www/html/node_modules/@babel/parser/lib/index.js:14852:38)\n    at parser (/var/www/html/node_modules/@babel/core/lib/parser/index.js:52:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/var/www/html/node_modules/@babel/core/lib/transformation/normalize-file.js:87:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/var/www/html/node_modules/@babel/core/lib/transformation/index.js:29:50)\n    at run.next (<anonymous>)\n    at Function.transform (/var/www/html/node_modules/@babel/core/lib/transform.js:25:41)\n    at transform.next (<anonymous>)\n    at step (/var/www/html/node_modules/gensync/index.js:261:32)\n    at /var/www/html/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/var/www/html/node_modules/gensync/index.js:223:11)");
 
 /***/ }),
 

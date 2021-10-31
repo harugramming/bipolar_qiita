@@ -28,36 +28,27 @@
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="1-tab">
             <div class="tab-pane-header">
-              <h5>Navigation subtitle</h5>
               <p class="lead">
                 <div>
                     @foreach($articles as $article)
                     @include('articles.card')
                     @endforeach</div>
               </p>
-              <a href="#tab1" target="_blank">Link directly to this tab</a>
             </div>
-            <p>1: Additional</p>
           </div>
           <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="2-tab">
             <div class="tab-pane-header">
-              <h5>Navigation subtitle</h5>
               <p class="lead">
                 <div>Lorem ipsum</div>
               </p>
-              <a href="#tab2" target="_blank">Link directly to this tab</a>
             </div>
-            <p>2: Additional</p>
           </div>
           <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="3-tab">
             <div class="tab-pane-header">
-              <h5>Navigation subtitle</h5>
               <p class="lead">
                 <div>Lorem ipsum</div>
               </p>
-              <a href="#tab3" target="_blank">Link directly to this tab</a>
             </div>
-            <p>3: Additional</p>
           </div>
         </div>
       </div>

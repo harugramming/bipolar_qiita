@@ -11,11 +11,12 @@ class UserController extends Controller
     {
         $user = User::where('name', $name)->first();
 
-        $articles = $user->articles->sortByDesc('created_at');
-
+        $articles_posts = $user->articles->sortByDesc('created_at');
+        $articles_likes = $user->likes->sortByDesc('created_at');
         return view('users.show', [
             'user' => $user,
-            'articles' => $articles,
+            'articles_posts' => $articles_posts,
+            'articles_likes' => $articles_likes,
         ]);
     }
 

@@ -3,7 +3,7 @@
 navguest
 @endguest
 ">
-    <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>ばいぽら</a>
+    <a class="navbar-brand" href="/">bipolarTips</a>
 
     <ul class="navbar-nav ml-auto">
     　@guest

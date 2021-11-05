@@ -79,3 +79,9 @@ body #main-container {
   margin-bottom: 30px;
 }
 
+.card-text {
+  white-space: pre-wrap;
+  font-size: 18px !important;
+  color: #000 !important;
+}
+

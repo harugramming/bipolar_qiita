@@ -53,17 +53,17 @@ body #main-container {
   margin: 30px auto 0 auto;
 }
 
-body #main-container .nav-tabs {
+.nav-tabs {
   border-bottom: none;
 }
 
-body #main-container .nav-tabs .nav-link.active {
+.nav-tabs .nav-link.active {
   background-color: #fff;
   border-bottom: #fff;
   font-weight: bold;
 }
 
-body #main-container .tab-pane.active .tab-pane-header {
+.tab-pane.active .tab-pane-header {
   padding: 1px 8px 8px 8px;
   background-color: #fff;
   border-top-right-radius: 0.5rem;
@@ -71,7 +71,11 @@ body #main-container .tab-pane.active .tab-pane-header {
   margin-bottom: 1rem;
 }
 
-body #main-container .tab-pane:first-child .tab-pane-header {
+.tab-pane:first-child .tab-pane-header {
   border-top-left-radius: 0;
+}
+
+.userprofile {
+  margin-bottom: 30px;
 }
 

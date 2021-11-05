@@ -44,24 +44,29 @@ body{
     #main-container{
         max-width: 1200px;
         margin: 30px auto 0 auto;
-        .nav-tabs {
-            border-bottom:none;
-          }
-        .nav-tabs .nav-link.active {
-        background-color:#fff;
-        border-bottom:#fff;
-        font-weight: bold;
-        }
-        .tab-pane.active .tab-pane-header {
-        padding:1px 8px 8px 8px;
-
-        background-color:#fff;
-        border-top-right-radius: .5rem;
-        border-top-left-radius: .5rem;
-        margin-bottom:1rem;
-        }
-        .tab-pane:first-child .tab-pane-header {
-        border-top-left-radius: 0;
-        }
     }
+}
+// タブ表示のCSS start
+.nav-tabs {
+    border-bottom:none;
+  }
+.nav-tabs .nav-link.active {
+background-color:#fff;
+border-bottom:#fff;
+font-weight: bold;
+}
+.tab-pane.active .tab-pane-header {
+padding:1px 8px 8px 8px;
+
+background-color:#fff;
+border-top-right-radius: .5rem;
+border-top-left-radius: .5rem;
+margin-bottom:1rem;
+}
+.tab-pane:first-child .tab-pane-header {
+border-top-left-radius: 0;
+}
+// タブ表示のCSS end
+.userprofile{
+    margin-bottom:30px;
 }

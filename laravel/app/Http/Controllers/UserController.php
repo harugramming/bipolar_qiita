@@ -20,6 +20,15 @@ class UserController extends Controller
         ]);
     }
 
+    public function edit(string $name)
+    {
+        $user = User::where('name', $name)->first();
+
+        return  view('users.edit', [
+            'user' => $user,
+        ]);
+    }
+
     public function likes(string $name)
     {
         $user = User::where('name', $name)->first();

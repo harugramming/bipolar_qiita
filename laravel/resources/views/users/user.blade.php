@@ -21,6 +21,7 @@
           {{ $user->name }}
         </a>
       </h2>
+      <a href="{{ route('users.edit', ['name' => $user->name]) }}">プロフィールを編集</a>
     </div>
     <div class="card-body">
       <div class="card-text">

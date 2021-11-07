@@ -16,6 +16,8 @@
       </div>
       <h2 class="h5 card-title m-0">
         <a href="{{ route('users.show', ['name' => $user->name]) }}" class="text-dark">
+          {{ $user->nickname}}
+          @
           {{ $user->name }}
         </a>
       </h2>

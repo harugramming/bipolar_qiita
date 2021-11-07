@@ -6,6 +6,8 @@
       <div>
         <div class="font-weight-bold">
             <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+                {{ $article->user->nickname}}
+                @
                 {{ $article->user->name }}
             </a>
         </div>

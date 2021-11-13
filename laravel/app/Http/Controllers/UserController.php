@@ -32,6 +32,10 @@ class UserController extends Controller
     public function update(string $name, Request $request){
         $user = User::where('name', $name)->first();
 
+        $path = $request->file('image')->store('public/profiles/');
+        $user->profile_image = basename($path);
+        $user->save();
+
         User::where('name', $name)->update(['nickname' => $request->input('nickname')]);
         return redirect()->route('users.edit',['user' => $user, 'name' => $name]);
     }

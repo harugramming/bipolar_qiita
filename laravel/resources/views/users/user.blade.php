@@ -21,7 +21,9 @@
           {{ $user->name }}
         </a>
       </h2>
+      @if( Auth::id() == $user->id )
       <a href="{{ route('users.edit', ['name' => $user->name]) }}">プロフィールを編集</a>
+      @endif
     </div>
     <div class="card-body">
       <div class="card-text">

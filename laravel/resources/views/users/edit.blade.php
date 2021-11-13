@@ -7,7 +7,7 @@
   <div class="container">
     @include('users.user')
     <div class="container">
-        <form method="POST" action="{{ route('register') }}">
+        <form method="GET" action="{{ route('users.update', ['name' => $user->name]) }}">
             @csrf
         <div class="md-form">
             <label for="nickname">ユーザー名（表示名）</label>

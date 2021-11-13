@@ -29,6 +29,12 @@ class UserController extends Controller
         ]);
     }
 
+    public function update(string $name, Request $request){
+        $user = User::where('name', $name)->first();
+
+        User::where('name', $name)->update(['nickname' => $request->input('nickname')]);
+        return redirect()->route('users.edit',['user' => $user, 'name' => $name]);
+    }
     public function likes(string $name)
     {
         $user = User::where('name', $name)->first();

@@ -10,6 +10,12 @@ class UserController extends Controller
     public function show(string $name)
     {
         $user = User::where('name', $name)->first();
+        
+        $data = $user->articles;
+        $counts_likes = 0;
+        foreach ($data as $d) {
+            $counts_likes += \DB::table('likes')->where('article_id', $d->id)->count();
+        }
 
         $articles_posts = $user->articles->sortByDesc('created_at');
         $articles_likes = $user->likes->sortByDesc('created_at');
@@ -17,6 +23,7 @@ class UserController extends Controller
             'user' => $user,
             'articles_posts' => $articles_posts,
             'articles_likes' => $articles_likes,
+            'counts_likes' => $counts_likes,
         ]);
     }
 

@@ -21,6 +21,7 @@
           {{ $user->name }}
         </a>
       </h2>
+      <p>総いいね数：{{ $counts_likes }}</p>
       <p>{{ $user->profile_text }}</p>
       @if( Auth::id() == $user->id )
       <a href="{{ route('users.edit', ['name' => $user->name]) }}">プロフィールを編集</a>

@@ -16,6 +16,11 @@
         <div>
             <input type="file" name="image">
         </div>
+        <div class="md-form">
+            <label for="profile_text">自己紹介文</label>
+            <textarea maxlength="512" class="form-control" type="text" id="profile_text" name="profile_text" required value="{{ $user->profile_text}}">
+            </textarea>
+        </div>
         <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">更新する</button>
         </form>
     </div>

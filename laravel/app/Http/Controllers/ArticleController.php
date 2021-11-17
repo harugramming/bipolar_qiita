@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Article;
+use App\Comment;
 use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
@@ -52,9 +54,19 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
-        return view('articles.show', ['article' => $article]);
+        $comment = \App\Comment::join('users', 'users.id', '=', 'comments.user_id')->where('article_id', $article->id)->get();
+        return view('articles.show', ['article' => $article, 'comments' => $comment]);
     }
 
+    public function post_comment(Request $request, Article $article)
+    {
+        $comment = new Comment();
+        $comment->fill(['user_id' => Auth::id(), 'article_id' => $article->id, 'comment' => $request->comment]);
+        $comment->save();
+
+        $comment = \App\Comment::join('users', 'users.id', '=', 'comments.user_id')->where('article_id', $article->id)->get();
+        return view('articles.show', ['article' => $article, 'comments' => $comment]);
+    }
     public function like(Request $request, Article $article)
     {
         $article->likes()->detach($request->user()->id);

@@ -68,24 +68,34 @@ class UserController extends Controller
     public function followings(string $name)
     {
         $user = User::where('name', $name)->first();
-
+        $data = $user->articles;
+        $counts_likes = 0;
+        foreach ($data as $d) {
+            $counts_likes += \DB::table('likes')->where('article_id', $d->id)->count();
+        }
         $followings = $user->followings->sortByDesc('created_at');
 
         return view('users.followings', [
             'user' => $user,
             'followings' => $followings,
+            'counts_likes' => $counts_likes,
         ]);
     }
 
     public function followers(string $name)
     {
         $user = User::where('name', $name)->first();
-
+        $data = $user->articles;
+        $counts_likes = 0;
+        foreach ($data as $d) {
+            $counts_likes += \DB::table('likes')->where('article_id', $d->id)->count();
+        }
         $followers = $user->followers->sortByDesc('created_at');
 
         return view('users.followers', [
             'user' => $user,
             'followers' => $followers,
+            'counts_likes' => $counts_likes,
         ]);
     }
 

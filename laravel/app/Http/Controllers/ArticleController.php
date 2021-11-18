@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Article;
 use App\Comment;
 use App\Http\Requests\ArticleRequest;
+use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
@@ -19,8 +20,13 @@ class ArticleController extends Controller
     {
         $articles = Article::all()->sortByDesc('created_at');
         $articles_ranking = Article::withcount('likes')->orderBy('likes_count', 'desc')->get();
-
-        return view('articles.index', ['articles' => $articles, 'articles_ranking' => $articles_ranking]);
+        $date = new Carbon('-1 months');
+        $articles_trend = Article::withcount('likes')->orderBy('likes_count', 'desc')->whereDate('created_at', '>', $date)->get();
+        return view('articles.index',
+        ['articles' => $articles,
+        'articles_ranking' => $articles_ranking,
+        'articles_trend' => $articles_trend
+        ]);
     }
 
     public function create()

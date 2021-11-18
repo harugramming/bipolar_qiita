@@ -51,7 +51,11 @@
           <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="3-tab">
             <div class="tab-pane-header">
               <p class="lead">
-                <div>Lorem ipsum</div>
+                <div>
+                    @foreach($articles_trend as $article)
+                    @include('articles.card')
+                    @endforeach
+                </div>
               </p>
             </div>
           </div>

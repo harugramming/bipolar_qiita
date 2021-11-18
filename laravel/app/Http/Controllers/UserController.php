@@ -30,9 +30,14 @@ class UserController extends Controller
     public function edit(string $name)
     {
         $user = User::where('name', $name)->first();
-
+        $data = $user->articles;
+        $counts_likes = 0;
+        foreach ($data as $d) {
+            $counts_likes += \DB::table('likes')->where('article_id', $d->id)->count();
+        }
         return  view('users.edit', [
             'user' => $user,
+            'counts_likes' => $counts_likes,
         ]);
     }
 

@@ -18,8 +18,9 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all()->sortByDesc('created_at');
+        $articles_ranking = Article::withcount('likes')->orderBy('likes_count', 'desc')->get();
 
-        return view('articles.index', ['articles' => $articles]);
+        return view('articles.index', ['articles' => $articles, 'articles_ranking' => $articles_ranking]);
     }
 
     public function create()

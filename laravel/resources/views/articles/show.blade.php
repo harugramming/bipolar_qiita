@@ -12,7 +12,6 @@
     {{ $comments[$i]->comment }}
     <br>
     @endfor
-    {{ $comments }}
     <form method="POST" action="{{ route('articles.post_comment', ['article' => $article] ) }}">
     @csrf
     <div class="form-group">

@@ -32,14 +32,19 @@
                 <div>
                     @foreach($articles as $article)
                     @include('articles.card')
-                    @endforeach</div>
+                    @endforeach
+                </div>
               </p>
             </div>
           </div>
           <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="2-tab">
             <div class="tab-pane-header">
               <p class="lead">
-                <div>Lorem ipsum</div>
+                <div>
+                    @foreach($articles_ranking as $article)
+                    @include('articles.card')
+                    @endforeach
+                </div>
               </p>
             </div>
           </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class UserController extends Controller
@@ -30,6 +31,9 @@ class UserController extends Controller
     public function edit(string $name)
     {
         $user = User::where('name', $name)->first();
+        if(Auth::id() != $user->id){
+            abort(403);
+        }
         $data = $user->articles;
         $counts_likes = 0;
         foreach ($data as $d) {

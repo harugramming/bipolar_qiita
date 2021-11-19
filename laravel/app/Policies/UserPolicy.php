@@ -19,9 +19,4 @@ class UserPolicy
     {
         //
     }
-
-    public function edit(User $user, string $name){
-        // return $user->name === $name;
-        return false;
-    }
 }

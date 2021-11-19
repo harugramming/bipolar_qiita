@@ -43999,7 +43999,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {/* ここには、表示するリストの数を指定します。 */
-var moreNum = 5;
+var moreNum = 16;
 /* 表示するリストの数以降のリストを隠しておきます。 */
 
 $('.list-item:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');

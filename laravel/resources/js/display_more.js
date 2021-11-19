@@ -1,5 +1,5 @@
 /* ここには、表示するリストの数を指定します。 */
-var moreNum = 5;
+var moreNum = 16;
 
 /* 表示するリストの数以降のリストを隠しておきます。 */
 $('.list-item:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');

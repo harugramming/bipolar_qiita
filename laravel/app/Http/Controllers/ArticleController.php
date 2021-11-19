@@ -18,10 +18,25 @@ class ArticleController extends Controller
 
     public function index()
     {
-        $articles = Article::all()->sortByDesc('created_at');
-        $articles_ranking = Article::withcount('likes')->orderBy('likes_count', 'desc')->get();
+        if(Article::all()->sortByDesc('created_at')->count() >= 30){
+            $articles = Article::latest('created_at')
+            ->simplePaginate(30)->sortByDesc('created_at');
+        }else{
+            $articles = Article::all()->sortByDesc('created_at');
+        }
+
+        if(Article::withcount('likes')->orderBy('likes_count', 'desc')->count() >= 30){
+            $articles_ranking = Article::withcount('likes')->orderBy('likes_count', 'desc')->simplePaginate(30);
+        }else{
+            $articles_ranking = Article::withcount('likes')->orderBy('likes_count', 'desc')->get();
+        }
+
         $date = new Carbon('-1 months');
-        $articles_trend = Article::withcount('likes')->orderBy('likes_count', 'desc')->whereDate('created_at', '>', $date)->get();
+        if(Article::withcount('likes')->orderBy('likes_count', 'desc')->whereDate('created_at', '>', $date)->count() >= 30){
+            $articles_trend = Article::withcount('likes')->orderBy('likes_count', 'desc')->whereDate('created_at', '>', $date)->simplePaginate(30);
+        }else{
+            $articles_trend = Article::withcount('likes')->orderBy('likes_count', 'desc')->whereDate('created_at', '>', $date)->get();
+        }
         return view('articles.index',
         ['articles' => $articles,
         'articles_ranking' => $articles_ranking,

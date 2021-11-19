@@ -2,6 +2,18 @@ body {
   background-color: #e0e0e0 !important;
 }
 
+body #main-container .container #myTabContent .list-item {
+  opacity: 1;
+}
+
+body #main-container .container #myTabContent .list-item.is-hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   body .navguest {
     padding: 20px 120px !important;
@@ -51,6 +63,27 @@ body .welcome .welcome-inner-discription {
 body #main-container {
   max-width: 1200px;
   margin: 30px auto 0 auto;
+}
+
+body .list-btn {
+  margin-top: 20px;
+}
+
+body .list-btn button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  height: 32px;
+  line-height: 32px;
+  width: 120px;
+  z-index: 7;
+}
+
+body .list-btn.is-btn-hidden {
+  display: none;
 }
 
 .nav-tabs {

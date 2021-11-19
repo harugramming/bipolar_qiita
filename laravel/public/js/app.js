@@ -43797,22 +43797,25 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_bootstrap__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_ArticleLike__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ArticleLike */ "./resources/js/components/ArticleLike.vue");
-/* harmony import */ var _components_FollowButton__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/FollowButton */ "./resources/js/components/FollowButton.vue");
+/* harmony import */ var _display_more__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./display_more */ "./resources/js/display_more.js");
+/* harmony import */ var _display_more__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_display_more__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_ArticleLike__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ArticleLike */ "./resources/js/components/ArticleLike.vue");
+/* harmony import */ var _components_FollowButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/FollowButton */ "./resources/js/components/FollowButton.vue");
 
 
 
 
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
+
+var app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({
   el: '#app',
   components: {
-    ArticleLike: _components_ArticleLike__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FollowButton: _components_FollowButton__WEBPACK_IMPORTED_MODULE_4__["default"]
+    ArticleLike: _components_ArticleLike__WEBPACK_IMPORTED_MODULE_4__["default"],
+    FollowButton: _components_FollowButton__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
 });
 
@@ -43985,6 +43988,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FollowButton_vue_vue_type_template_id_426ba0ae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/display_more.js":
+/*!**************************************!*\
+  !*** ./resources/js/display_more.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {/* ここには、表示するリストの数を指定します。 */
+var moreNum = 5;
+/* 表示するリストの数以降のリストを隠しておきます。 */
+
+$('.list-item:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-hidden');
+/* 全てのリストを表示したら「もっとみる」ボタンをフェードアウトします。 */
+
+$('.list-btn').on('click', function () {
+  console.log("click");
+  $('.list-item.is-hidden').slice(0, moreNum).removeClass('is-hidden');
+
+  if ($('.list-item.is-hidden').length == 0) {
+    $('.list-btn').fadeOut();
+  }
+});
+/* リストの数が、表示するリストの数以下だった場合、「もっとみる」ボタンを非表示にします。 */
+
+$(function () {
+  var list = $(".articles_cards_list div").length;
+
+  if (list < moreNum) {
+    $('.list-btn').addClass('is-btn-hidden');
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 

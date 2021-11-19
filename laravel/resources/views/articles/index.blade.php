@@ -29,7 +29,7 @@
           <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="1-tab">
             <div class="tab-pane-header">
               <p class="lead">
-                <div>
+                <div class="articles_cards_list">
                     @foreach($articles as $article)
                     @include('articles.card')
                     @endforeach
@@ -63,7 +63,8 @@
       </div>
       <!-- /.container -->
 </div>
-
-  </div>
-
+</div>
+　<div class="list-btn">
+    <button>もっと見る</button>
+　</div>
 @endsection

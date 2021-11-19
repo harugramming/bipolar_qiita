@@ -1,4 +1,4 @@
-<div class="card mt-3">
+<div class="card mt-3 list-item">
     <div class="card-body d-flex flex-row">
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
         <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">

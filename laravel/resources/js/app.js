@@ -1,4 +1,5 @@
 import './bootstrap'
+import './display_more'
 import $ from 'jquery'
 import Vue from 'vue'
 import ArticleLike from './components/ArticleLike'

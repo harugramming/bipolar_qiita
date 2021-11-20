@@ -13,3 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('test', 'ArticleController@index');

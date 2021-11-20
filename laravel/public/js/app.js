@@ -43817,6 +43817,29 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_3___default.a({
     ArticleLike: _components_ArticleLike__WEBPACK_IMPORTED_MODULE_4__["default"],
     FollowButton: _components_FollowButton__WEBPACK_IMPORTED_MODULE_5__["default"]
   }
+}); // ツールバー機能の設定
+
+var toolbarOptions = [//見出し
+[{
+  'header': [1, 2, 3, false]
+}], //太字、斜め、アンダーバー
+['bold', 'italic', 'underline'], // リスト
+[{
+  'list': 'ordered'
+}, {
+  'list': 'bullet'
+}], //画像挿入
+['image'], //URLリンク
+['link']];
+var quill = new Quill('#editor', {
+  theme: 'snow',
+  modules: {
+    //ツールバーの設定
+    toolbar: toolbarOptions
+  }
+});
+quill.on('text-change', function (delta, oldDelta, source) {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name=body]').val(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.ql-editor').html());
 });
 
 /***/ }),

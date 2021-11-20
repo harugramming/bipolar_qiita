@@ -9,6 +9,9 @@
   </title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  {{-- Quill --}}
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <!-- Bootstrap core CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +23,11 @@
 <div id="app">
   @yield('content')
 </div>
+    {{-- Quill --}}
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
     <script src="{{ mix('js/app.js') }}"></script>
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->

@@ -44,6 +44,10 @@ modules: {
 });
 
 quill.on('text-change', function(delta, oldDelta, source) {
-    $('input[name=body]').val($('.ql-editor').html());
+    $('input[name=body]').val(auto_link($('.ql-editor').html()));
 });
 
+function auto_link(val) {
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return val.replace(exp,"<i class='fa fa-globe'>&nbsp;</i><a target='_blank' href='$1'>$1</a>");
+  }

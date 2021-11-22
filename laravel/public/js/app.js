@@ -43839,8 +43839,13 @@ var quill = new Quill('#editor', {
   }
 });
 quill.on('text-change', function (delta, oldDelta, source) {
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name=body]').val(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.ql-editor').html());
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name=body]').val(auto_link(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.ql-editor').html()));
 });
+
+function auto_link(val) {
+  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  return val.replace(exp, "<i class='fa fa-globe'>&nbsp;</i><a target='_blank' href='$1'>$1</a>");
+}
 
 /***/ }),
 

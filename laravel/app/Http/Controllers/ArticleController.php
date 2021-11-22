@@ -51,6 +51,24 @@ class ArticleController extends Controller
 
     public function store(ArticleRequest $request, Article $article)
     {
+        $request->body = htmlspecialchars($request->body,ENT_QUOTES,'UTF-8');
+        $search = array('&lt;h1&gt;','&lt;/h1&gt;',
+        '&lt;h2&gt;','&lt;/h2&gt;',
+        '&lt;h3&gt;','&lt;/h3&gt;',
+        '&lt;p&gt;','&lt;/p&gt;',
+        '&lt;em&gt;','&lt;/em&gt;',
+        '&lt;ol&gt;','&lt;/ol&gt;',
+        '&lt;li&gt;','&lt;/li&gt;',
+        '&lt;ul&gt;','&lt;/ul&gt;',
+        '&lt;img','&lt;/img&gt;',
+        '&lt;a&gt;','&lt;/a&gt;',
+        '&lt;b&gt;','&lt;/b&gt;',
+        '&lt;u&gt;','&lt;/u&gt;',
+        '&lt;strong&gt;','&lt;/strong&gt;',
+     );
+        $replace = array('<h1>','</h1>','<h2>','</h2>','<h3>','</h3>',
+        '<p>','</p>','<em>','</em>','<ol>','</ol>','<ul>','</ul>','<li>','</li>','<img','</img>','<a>','</a>','<b>','</b>','<u>','</u>','<strong>','</strong>');
+        $request->body = str_replace($search,$replace,$request->body);
         $article->fill($request->all());
         $article->user_id = $request->user()->id;
         $article->save();

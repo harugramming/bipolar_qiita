@@ -54,7 +54,28 @@ class UserController extends Controller
             $user->save();
         }
         User::where('name', $name)->update(['nickname' => $request->input('nickname')]);
-        User::where('name', $name)->update(['profile_text' => $request->input('profile_text')]);
+
+        $request->profile_text = htmlspecialchars($request->profile_text,ENT_QUOTES,'UTF-8');
+        $search = array('&lt;h1&gt;','&lt;/h1&gt;',
+        '&lt;h2&gt;','&lt;/h2&gt;',
+        '&lt;h3&gt;','&lt;/h3&gt;',
+        '&lt;p&gt;','&lt;/p&gt;',
+        '&lt;em&gt;','&lt;/em&gt;',
+        '&lt;ol&gt;','&lt;/ol&gt;',
+        '&lt;li&gt;','&lt;/li&gt;',
+        '&lt;ul&gt;','&lt;/ul&gt;',
+        '&lt;img','&lt;/img&gt;',
+        '&lt;a','&lt;/a&gt;',
+        '&lt;b&gt;','&lt;/b&gt;',
+        '&lt;u&gt;','&lt;/u&gt;',
+        '&lt;strong&gt;','&lt;/strong&gt;',
+        '&gt;',"&#039;",
+     );
+        $replace = array('<h1>','</h1>','<h2>','</h2>','<h3>','</h3>',
+        '<p>','</p>','<em>','</em>','<ol>','</ol>','<ul>','</ul>','<li>','</li>','<img','</img>','<a','</a>','<b>','</b>','<u>','</u>','<strong>','</strong>', '>','');
+        $request->profile_text = str_replace($search,$replace,$request->profile_text);
+        User::where('name', $name)->update(['profile_text' => $request->profile_text]);
+
         return redirect()->route('users.edit',['user' => $user, 'name' => $name]);
     }
     public function likes(string $name)

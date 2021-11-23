@@ -35,6 +35,7 @@ var toolbarOptions = [
     //URLリンク
     ['link']
 ];
+if(document.URL.match(/create/)){
 var quill = new Quill('#editor', {
 theme: 'snow',
 modules: {
@@ -46,8 +47,13 @@ modules: {
 quill.on('text-change', function(delta, oldDelta, source) {
     $('input[name=body]').val(auto_link($('.ql-editor').html()));
 });
-
+}
 function auto_link(val) {
     var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return val.replace(exp,"<i class='fa fa-globe'>&nbsp;</i><a target='_blank' href='$1'>$1</a>");
+    return val.replace(exp,"<a target='_blank' href='$1'>$1</a>");
   }
+
+$('#profile_update_button').on('click',function(){
+    $('#profile_text').val(auto_link($('#profile_text').val()));
+    $('#profile_update_form').submit();
+})

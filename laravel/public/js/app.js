@@ -43831,21 +43831,29 @@ var toolbarOptions = [//見出し
 }], //画像挿入
 ['image'], //URLリンク
 ['link']];
-var quill = new Quill('#editor', {
-  theme: 'snow',
-  modules: {
-    //ツールバーの設定
-    toolbar: toolbarOptions
-  }
-});
-quill.on('text-change', function (delta, oldDelta, source) {
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name=body]').val(auto_link(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.ql-editor').html()));
-});
+
+if (document.URL.match(/create/)) {
+  var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+      //ツールバーの設定
+      toolbar: toolbarOptions
+    }
+  });
+  quill.on('text-change', function (delta, oldDelta, source) {
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name=body]').val(auto_link(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.ql-editor').html()));
+  });
+}
 
 function auto_link(val) {
   var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-  return val.replace(exp, "<i class='fa fa-globe'>&nbsp;</i><a target='_blank' href='$1'>$1</a>");
+  return val.replace(exp, "<a target='_blank' href='$1'>$1</a>");
 }
+
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('#profile_update_button').on('click', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('#profile_text').val(auto_link(jquery__WEBPACK_IMPORTED_MODULE_2___default()('#profile_text').val()));
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('#profile_update_form').submit();
+});
 
 /***/ }),
 

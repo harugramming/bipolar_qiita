@@ -8,6 +8,5 @@
   <input name="body">
 </div>
 <div id="editor">
-    <h2>見よ！</h2>
-    <p>これがリッチテキストエディタ「<strong>Quill</strong>」の実力だ！</p>
+    {!! $article->body ?? old('body') !!}
 </div>

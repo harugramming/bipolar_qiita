@@ -43832,7 +43832,7 @@ var toolbarOptions = [//見出し
 ['image'], //URLリンク
 ['link']];
 
-if (document.URL.match(/create/)) {
+if (document.URL.match(/articles/) && (document.URL.match(/create/) || document.URL.match(/edit/))) {
   var quill = new Quill('#editor', {
     theme: 'snow',
     modules: {

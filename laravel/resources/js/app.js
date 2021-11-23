@@ -35,7 +35,7 @@ var toolbarOptions = [
     //URLリンク
     ['link']
 ];
-if(document.URL.match(/create/)){
+if(document.URL.match(/articles/) && (document.URL.match(/create/) || document.URL.match(/edit/))){
 var quill = new Quill('#editor', {
 theme: 'snow',
 modules: {
@@ -48,6 +48,7 @@ quill.on('text-change', function(delta, oldDelta, source) {
     $('input[name=body]').val(auto_link($('.ql-editor').html()));
 });
 }
+
 function auto_link(val) {
     var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
     return val.replace(exp,"<a target='_blank' href='$1'>$1</a>");

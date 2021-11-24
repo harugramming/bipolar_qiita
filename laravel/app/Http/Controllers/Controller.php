@@ -18,4 +18,7 @@ class Controller extends BaseController
     public function privacypolicy(){
         return view('privacypolicy');
     }
+    public function contact(){
+        return view('contact');
+    }
 }

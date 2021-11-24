@@ -15,4 +15,7 @@ class Controller extends BaseController
     {
         return view('terms');
     }
+    public function privacypolicy(){
+        return view('privacypolicy');
+    }
 }

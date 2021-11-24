@@ -117,6 +117,14 @@ body footer .st-footer_container .st-footer_navigation ul li {
   }
 }
 
+body .wrapHINAGATA {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 1024px) {
   body .welcome {
     padding: 0 120px !important;

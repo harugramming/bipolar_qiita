@@ -67,19 +67,5 @@
 　<div class="list-btn">
     <button>もっと見る</button>
 　</div>
-<footer class="st-footer">
-    <div class="st-footer_container">
-        <div class="st-footer_start">
-            <h1>bipolarTips</h1>
-            <p>双極性障害の方のための情報共有サービス</p>
-        </div>
-        <nav class="st-footer_navigation">
-            <ul>
-                <li><a>利用規約</a></li>
-                <li><a>プライバシーポリシー</a></li>
-                <li><a>Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</footer>
+@include('articles.footer')
 @endsection

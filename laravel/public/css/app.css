@@ -2,8 +2,20 @@ body {
   background-color: #e0e0e0 !important;
 }
 
+body nav {
+  background-color: #1858bA;
+}
+
 body #main-container .container #myTabContent .list-item {
   opacity: 1;
+}
+
+body #main-container .container #myTabContent .list-item .article_profile_text {
+  padding: 8px;
+}
+
+body #main-container .container #myTabContent .list-item img {
+  width: 70px;
 }
 
 body #main-container .container #myTabContent .list-item.is-hidden {
@@ -31,8 +43,8 @@ body .welcome {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #1E00FF;
   background-image: url(/images/geometry2.png?8b9eb18dd056013d16b945613a1ca86f);
+  background-color: #1858bA;
   background-blend-mode: multiply;
   background-position: 0px 0px;
   -webkit-mask-position-x: 0px;
@@ -54,6 +66,57 @@ body .welcome .welcome-inner-discription {
   line-height: 2;
 }
 
+body footer {
+  color: #ffffff;
+  background-color: #3D4040;
+  margin-top: 64px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .st-footer_container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+body footer .st-footer_container .st-footer_start {
+  padding: 30px 12px;
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .st-footer_container .st-footer_start {
+    padding: 30px 24px;
+  }
+}
+
+body footer .st-footer_container .st-footer_navigation {
+  background-color: #3D4040;
+}
+
+body footer .st-footer_container .st-footer_navigation ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0 0 30px 30px;
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .st-footer_container .st-footer_navigation ul {
+    display: flex;
+    padding: 60px;
+  }
+}
+
+body footer .st-footer_container .st-footer_navigation ul li {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  body footer .st-footer_container .st-footer_navigation ul li {
+    margin: 4px 12px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   body .welcome {
     padding: 0 120px !important;
@@ -66,7 +129,8 @@ body #main-container {
 }
 
 body .list-btn {
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 body .list-btn button {

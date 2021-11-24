@@ -5,7 +5,7 @@
 @section('content')
 @include('nav')
   @guest
-  <div class="welcome blue-gradient">
+  <div class="welcome">
     <div class="welcome-inner">
         <h1 class="welcome-inner-main">双極性障害の歩き方</h1>
         <p class="welcome-inner-discription">bipolarTipsは双極性障害の方が、知識を共有するためのサービスです。調子の波を乗りこなすための、あなたの気づきを共有しましょう。</p>
@@ -67,4 +67,19 @@
 　<div class="list-btn">
     <button>もっと見る</button>
 　</div>
+<footer class="st-footer">
+    <div class="st-footer_container">
+        <div class="st-footer_start">
+            <h1>bipolarTips</h1>
+            <p>双極性障害の方のための情報共有サービス</p>
+        </div>
+        <nav class="st-footer_navigation">
+            <ul>
+                <li><a>利用規約</a></li>
+                <li><a>プライバシーポリシー</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
 @endsection

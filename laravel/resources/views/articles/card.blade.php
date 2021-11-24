@@ -3,7 +3,7 @@
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
         <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">
       </a>
-      <div>
+      <div class="article_profile_text">
         <div class="font-weight-bold">
             <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
                 {{ $article->user->nickname}}
@@ -61,7 +61,7 @@
       @endif
 
     </div>
-    <div class="card-body pt-0">
+    <div class="card-body pt-0 pb-0">
       <h3 class="h4 card-title">
         <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
           {{ $article->title }}

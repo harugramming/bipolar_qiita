@@ -7,7 +7,11 @@
   <div class="container">
     @include('articles.detail')
     @for($i = 0; $i < count($comments); $i++)
-    <img src="{{ asset('storage/profiles/'. $comments[$i]->profile_image ) }}" alt="プロフィール画像">
+    @if(strpos($comments[$i]->profile_image,'http:') !== false)
+    <img src="{{ $comments[$i]->profile_image }}">
+    @else
+    <img src="{{ asset('storage/profiles/'.$comments[$i]->profile_image) }}" alt="プロフィール画像">
+    @endif
     {{ $comments[$i]->name }}
     {{ $comments[$i]->comment }}
     <br>

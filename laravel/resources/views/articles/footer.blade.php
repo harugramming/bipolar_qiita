@@ -6,9 +6,9 @@
         </div>
         <nav class="st-footer_navigation">
             <ul>
-                <li><a>利用規約</a></li>
-                <li><a>プライバシーポリシー</a></li>
-                <li><a>連絡先</a></li>
+                <li><a href="terms" style="color:#fff;">利用規約</a></li>
+                <li><a href="privacypolicy" style="color:#fff;">プライバシーポリシー</a></li>
+                <li><a href="contact" style="color:#fff;">連絡先</a></li>
             </ul>
         </nav>
     </div>

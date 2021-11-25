@@ -1,7 +1,11 @@
 <div class="card mt-3 list-item">
     <div class="card-body d-flex flex-row">
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+        @if(strpos($article->user->profile_image,'http:') !== false)
+        <img src="{{ $article->user->profile_image }}">
+        @else
         <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">
+        @endif
       </a>
       <div class="article_profile_text">
         <div class="font-weight-bold">

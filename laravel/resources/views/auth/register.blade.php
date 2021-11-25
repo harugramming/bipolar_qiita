@@ -37,6 +37,8 @@
                   <label for="password_confirmation">パスワード(確認)</label>
                   <input class="form-control" type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
+                <div class="form-group"><input id="terms" required="required" style="margin-right: 4px;" type="checkbox"><label for="terms"><a href="terms" target="_blank">利用規約</a>に同意する</label></div>
+                <div class="form-group"><input id="privacy" required="required" style="margin-right: 4px;" type="checkbox"><label for="privacy"><a href="/privacypolicy" target="_blank">プライバシーポリシー</a>に同意する</label></div>
                 <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
               </form>
               <form class="btn btn-twitter-inverse btn-block btn-lg" method="get" action="auth/login/twitter"><button type="submit"><i class="fab fa-twitter"></i></i>Twitterアカウントで登録</button><input type="hidden" name="authenticity_token" value="sm5m2kAP4Q99QQu9ljhuL3Ifpu9EtVNhs83Gno153GrMIDWRjxaYXKYlz4m3B+yyfSI7TW0CoYsPWXaLwZ9Lqg=="></form>

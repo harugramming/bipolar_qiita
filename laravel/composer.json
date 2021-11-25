@@ -12,8 +12,9 @@
         "fideloper/proxy": "^4.4",
         "intervention/image": "^2.7",
         "laravel/framework": "^6.20",
+        "laravel/socialite": "4.*",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.3"
+        "laravel/ui": "1.*"
     },
     "require-dev": {
         "facade/ignition": "^1.16.4",

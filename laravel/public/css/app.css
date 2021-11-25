@@ -158,6 +158,19 @@ body .list-btn.is-btn-hidden {
   display: none;
 }
 
+.btn-twitter-inverse:hover {
+  color: #fff;
+  background-color: #2795e9;
+  border-color: #1375c0;
+}
+
+.btn-twitter-inverse button {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+
 .nav-tabs {
   border-bottom: none;
 }

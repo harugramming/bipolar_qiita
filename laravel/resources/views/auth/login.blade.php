@@ -36,7 +36,7 @@
                 <button class="btn btn-block blue-gradient mt-2 mb-2" type="submit">ログイン</button>
 
               </form>
-
+              <form class="btn btn-twitter-inverse btn-block btn-lg" method="get" action="auth/login/twitter"><button type="submit"><i class="fab fa-twitter"></i></i>Twitterアカウントで登録</button><input type="hidden" name="authenticity_token" value="sm5m2kAP4Q99QQu9ljhuL3Ifpu9EtVNhs83Gno153GrMIDWRjxaYXKYlz4m3B+yyfSI7TW0CoYsPWXaLwZ9Lqg=="></form>
               <div class="mt-0">
                 <a href="{{ route('register') }}" class="card-text">ユーザー登録はこちら</a>
               </div>

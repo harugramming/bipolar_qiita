@@ -133,6 +133,20 @@ body{
       display:none;
     }
 }
+.btn-twitter-inverse:hover {
+    color: #fff;
+    background-color: #2795e9;
+    border-color: #1375c0;
+}
+.btn-twitter-inverse{
+    button {
+        padding: 0;
+        background: transparent;
+        border: 0;
+        outline: none;
+    }
+}
+
 // タブ表示のCSS start
 .nav-tabs {
     border-bottom:none;

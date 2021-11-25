@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\TwitterLoginController;
 
 Auth::routes();
 Route::get('/', 'ArticleController@index')->name('articles.index');
@@ -36,3 +37,6 @@ Route::prefix('users')->name('users.')->group(function () {
 Route::get('/terms', 'Controller@terms')->name('terms');
 Route::get('/privacypolicy', 'Controller@privacypolicy')->name('privacypolicy');
 Route::get('/contact', 'Controller@contact')->name('contact');
+
+Route::get('auth/login/twitter', [TwitterLoginController::class, 'redirectToProvider']);
+Route::get('auth/twitter/callback',[TwitterLoginController::class, 'handleProviderCallback']);

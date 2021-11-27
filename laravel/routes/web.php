@@ -40,3 +40,6 @@ Route::get('/contact', 'Controller@contact')->name('contact');
 
 Route::get('auth/login/twitter', [TwitterLoginController::class, 'redirectToProvider']);
 Route::get('auth/twitter/callback',[TwitterLoginController::class, 'handleProviderCallback']);
+
+Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');

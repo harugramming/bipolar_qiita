@@ -43,3 +43,9 @@ Route::get('auth/twitter/callback',[TwitterLoginController::class, 'handleProvid
 
 Route::get('login/google', 'Auth\LoginController@redirectToGoogle');
 Route::get('login/google/callback', 'Auth\LoginController@handleGoogleCallback');
+
+// Stripeの処理
+Route::post('/payment', 'PaymentsController@payment')->name('payment');
+
+// 決済完了ページ
+Route::get('/complete', 'PaymentsController@complete')->name('complete');

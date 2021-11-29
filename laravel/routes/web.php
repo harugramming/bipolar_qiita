@@ -35,6 +35,7 @@ Route::prefix('users')->name('users.')->group(function () {
     });
 });
 Route::get('/terms', 'Controller@terms')->name('terms');
+Route::get('/about', 'Controller@about')->name('about');
 Route::get('/privacypolicy', 'Controller@privacypolicy')->name('privacypolicy');
 Route::get('/contact', 'Controller@contact')->name('contact');
 

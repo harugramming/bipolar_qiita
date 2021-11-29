@@ -6,6 +6,7 @@
         </div>
         <nav class="st-footer_navigation">
             <ul>
+                <li><a href="about" style="color:#fff;">このアプリについて</a></li>
                 <li><a href="terms" style="color:#fff;">利用規約</a></li>
                 <li><a href="privacypolicy" style="color:#fff;">プライバシーポリシー</a></li>
                 <li><a href="contact" style="color:#fff;">連絡先</a></li>

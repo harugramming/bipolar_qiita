@@ -103,6 +103,16 @@ body .welcome .welcome-inner-discription {
   line-height: 2;
 }
 
+body .register-container {
+  min-height: 100vh;
+}
+
+body .register-container .btn-twitter-inverse {
+  color: #fff;
+  background-color: #55acee;
+  border-color: #2795e9;
+}
+
 body footer {
   color: #ffffff;
   background-color: #3D4040;

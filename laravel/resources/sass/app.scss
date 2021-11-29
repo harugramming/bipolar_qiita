@@ -93,6 +93,14 @@ body{
             line-height: 2;
         }
     }
+    .register-container{
+        min-height:100vh;
+        .btn-twitter-inverse {
+            color: #fff;
+            background-color: #55acee;
+            border-color: #2795e9;
+        }
+    }
     footer{
         color: #ffffff;
         background-color: #3D4040;

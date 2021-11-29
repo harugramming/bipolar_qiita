@@ -272,6 +272,10 @@ body .list-btn.is-btn-hidden {
   margin-bottom: 30px;
 }
 
+.userprofile img {
+  width: 70px;
+}
+
 .card-text {
   white-space: pre-wrap;
   font-size: 18px !important;

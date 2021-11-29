@@ -217,6 +217,7 @@ body{
 // タブ表示のCSS start
 .nav-tabs {
     border-bottom:none;
+
   }
 .nav-tabs .nav-link.active {
 background-color:#fff;
@@ -237,6 +238,9 @@ border-top-left-radius: 0;
 // タブ表示のCSS end
 .userprofile{
     margin-bottom:30px;
+    img{
+        width:70px;
+    }
 }
 .card-text{
     white-space: pre-wrap;

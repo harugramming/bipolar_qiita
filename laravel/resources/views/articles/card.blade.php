@@ -2,9 +2,9 @@
     <div class="card-body d-flex flex-row">
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
         @if(strpos($article->user->profile_image,'http:') !== false)
-        <img src="{{ $article->user->profile_image }}">
+        <img src="{{ $article->user->profile_image }}" style="width:70px">
         @else
-        <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">
+        <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像" style="width:70px">
         @endif
       </a>
       <div class="article_profile_text">

@@ -26,6 +26,43 @@ body #main-container .container #myTabContent .list-item.is-hidden {
   display: none;
 }
 
+body .fundraising-container {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px !important;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #222;
+  border-radius: 3px 0 3px 0;
+}
+
+body .fundraising-container:before,
+body .fundraising-container:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 2px #222;
+  border-radius: 50%;
+}
+
+body .fundraising-container:before {
+  bottom: -12px;
+  right: -12px;
+}
+
+body .fundraising-container:after {
+  top: -12px;
+  left: -12px;
+}
+
+body .fundraising-container form {
+  margin: 0 auto !important;
+}
+
 @media screen and (min-width: 1024px) {
   body .navguest {
     padding: 20px 120px !important;

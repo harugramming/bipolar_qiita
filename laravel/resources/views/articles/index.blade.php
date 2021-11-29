@@ -67,19 +67,25 @@
 　<div class="list-btn">
     <button>もっと見る</button>
 　</div>
-<form action="{{ asset('payment') }}" method="POST" class="text-center mt-5">
-    {{ csrf_field() }}
-    <script
-        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="{{ env('STRIPE_KEY') }}"
-        data-amount="1000"
-        data-name="Stripe Demo"
-        data-label="決済をする"
-        data-description="これはStripeのデモです。"
-        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-        data-locale="auto"
-        data-currency="JPY">
-    </script>
-</form>
+<div class="fundraising-container">
+    <p>募金にご協力お願いします！</p>
+    <p>運営を継続するために、。。</p>
+    <p>一口 420円です！</p>
+    <form action="{{ asset('payment') }}" method="POST" class="text-center mt-5">
+        {{ csrf_field() }}
+        <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ env('STRIPE_KEY') }}"
+            data-amount="420"
+            data-name="Stripe Demo"
+            data-label="決済をする"
+            data-description="これはStripeのデモです。"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto"
+            data-currency="JPY">
+        </script>
+    </form>
+</div>
+
 @include('articles.footer')
 @endsection

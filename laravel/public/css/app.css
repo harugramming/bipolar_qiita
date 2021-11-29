@@ -26,6 +26,34 @@ body #main-container .container #myTabContent .list-item.is-hidden {
   display: none;
 }
 
+body .detail-profile a img {
+  width: 70px;
+}
+
+body .comment-container {
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+body .comment-container h1 {
+  margin: 0;
+  font-size: 21px;
+  padding: 18px 10px 0px 10px;
+}
+
+body .comment-container hr {
+  margin: 8px 0;
+}
+
+body .comment-container .comments {
+  margin: 10px 0;
+  padding: 0 6px;
+}
+
+body .comment-container .comments .comment-container-profiles {
+  padding: 8px;
+}
+
 body .fundraising-container {
   background-color: #fff;
   margin: 0 auto;

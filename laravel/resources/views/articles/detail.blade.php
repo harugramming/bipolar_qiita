@@ -1,16 +1,22 @@
-<div class="card mt-3">
-    <div class="card-body d-flex flex-row">
+<div class="card mt-3 ">
+    <div class="card-body d-flex flex-row detail-profile">
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+        @if(strpos($article->user->profile_image,'http:') !== false)
+        <img src="{{ $article->user->profile_image }}">
+        @else
         <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">
+        @endif
       </a>
-      <div>
-        <div class="font-weight-bold">
+      <div style="margin-left:8px;">
+        <div class="font-weight-bold" >
             <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
+                {{ $article->user->nickname}}
+                @
                 {{ $article->user->name }}
             </a>
         </div>
         <div class="font-weight-lighter">{{ $article->created_at->format('Y/m/d H:i') }}</div>
-      </div>
+    </div>
 
     @if( Auth::id() === $article->user_id )
       <!-- dropdown -->

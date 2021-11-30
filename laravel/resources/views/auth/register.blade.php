@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'ユーザー登録')
+@section('title', 'ユーザー登録 - bipolarTips - 双極向け知識共有サービス')
 
 @section('content')
   <div class="register-container" style="background-color: #fff;">

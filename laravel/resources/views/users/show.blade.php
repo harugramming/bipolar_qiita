@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', $user->name)
+@section('title', $user->name . ' bipolarTips - 双極向け知識共有サービス')
 
 @section('content')
   @include('nav')

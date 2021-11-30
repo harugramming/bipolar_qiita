@@ -7,6 +7,8 @@
   <title>
     @yield('title')
   </title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   {{-- Quill --}}

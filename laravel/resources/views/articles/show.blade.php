@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'bipolarTips - 双極向け知識共有サービス')
+@section('title', 'bipolarTips - 双極性障害向け知識共有サービス')
 
 @section('content')
 <nav class="navbar navbar-expand navbar-dark">

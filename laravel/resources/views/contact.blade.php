@@ -12,8 +12,8 @@
 </div>
 <div class="wrapHINAGATA">
     <h1>連絡先</h1>
-    <h2>e-mail: parumun73572@gmail.com</h2>
-    <h2>twitter: @parumun73572<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @haru_programm</h2>
+    <h2>e-mail: haruuchi.pool.0219@gmail.com</h2>
+    <h2>twitter: @bipolarTips2022<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp @haru_programm</h2>
 
     <p></p>
 </div>

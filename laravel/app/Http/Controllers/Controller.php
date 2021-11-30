@@ -6,6 +6,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use App\Article;
+use App\User;
 
 class Controller extends BaseController
 {
@@ -23,7 +25,12 @@ class Controller extends BaseController
     }
 
     public function about(){
-        return view('about');
+        $articles_count = Article::all()->count();
+        $users_count = User::all()->count();
+        return view('about',
+        ['articles_count' => $articles_count,
+         'users_count' => $users_count
+        ]);
     }
 }
 

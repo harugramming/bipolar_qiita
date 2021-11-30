@@ -141,6 +141,20 @@ body .register-container .btn-twitter-inverse {
   border-color: #2795e9;
 }
 
+body .about {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+body .about .about-container {
+  padding: 16px;
+}
+
+body .about .about-container h1 {
+  margin: 16px 0 0 16px;
+}
+
 body footer {
   color: #ffffff;
   background-color: #3D4040;

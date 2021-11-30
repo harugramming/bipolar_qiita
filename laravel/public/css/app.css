@@ -141,6 +141,10 @@ body .register-container .btn-twitter-inverse {
   border-color: #2795e9;
 }
 
+body .detail img {
+  max-width: 90%;
+}
+
 body .about {
   max-width: 1024px;
   margin: 0 auto;

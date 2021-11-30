@@ -1,4 +1,4 @@
-<div class="card mt-3 ">
+<div class="card mt-3 detail">
     <div class="card-body d-flex flex-row detail-profile">
       <a href="{{ route('users.show', ['name' => $article->user->name]) }}" class="text-dark">
         @if(strpos($article->user->profile_image,'http:') !== false)

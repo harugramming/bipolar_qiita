@@ -92,7 +92,7 @@ class UserController extends Controller
 
     public function followings(string $name)
     {
-        $user = User::where('name', $name)->first();
+        $user = User::where('name', $name)->first()->load('followings.followers');
         $data = $user->articles;
         $counts_likes = 0;
         foreach ($data as $d) {
@@ -109,7 +109,7 @@ class UserController extends Controller
 
     public function followers(string $name)
     {
-        $user = User::where('name', $name)->first();
+        $user = User::where('name', $name)->first()->load('followers.followers');
         $data = $user->articles;
         $counts_likes = 0;
         foreach ($data as $d) {

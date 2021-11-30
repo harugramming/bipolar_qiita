@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta content="bipolarTipsは双極性障害の方向けの知識共有サービスです。" name="description">
   <title>
     @yield('title')
   </title>

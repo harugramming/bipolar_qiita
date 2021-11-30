@@ -1,6 +1,8 @@
 @extends('app')
 
-@section('title', 'bipolarTips - 双極性障害向け知識共有サービス')
+@section('title')
+{{ $article->title }} - bipolarTips - 双極性障害向け知識共有サービス
+@endsection
 
 @section('content')
 <nav class="navbar navbar-expand navbar-dark">

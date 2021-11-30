@@ -22,7 +22,7 @@ class ArticleController extends Controller
             $articles = Article::latest('created_at')
             ->simplePaginate(30)->sortByDesc('created_at');
         }else{
-            $articles = Article::all()->sortByDesc('created_at');
+            $articles = Article::all()->sortByDesc('created_at')->load(['user', 'likes']);
         }
 
         if(Article::withcount('likes')->orderBy('likes_count', 'desc')->count() >= 30){

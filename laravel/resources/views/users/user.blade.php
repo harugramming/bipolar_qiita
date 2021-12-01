@@ -5,7 +5,7 @@
             @if(strpos($user->profile_image,'http:') !== false)
             <img src="{{ $user->profile_image }}">
             @else
-            <img src="{{ asset('storage/profiles/'.$user->profile_image) }}" alt="プロフィール画像">
+            <img src="data:image/png;base64,{{ $user->profile_image }}" style="width:70px;">
             @endif
         </a>
         @if( Auth::id() !== $user->id )

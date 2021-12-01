@@ -4,7 +4,7 @@
         @if(strpos($article->user->profile_image,'http:') !== false)
         <img src="{{ $article->user->profile_image }}">
         @else
-        <img src="{{ asset('storage/profiles/'.$article->user->profile_image) }}" alt="プロフィール画像">
+        <img src="data:image/png;base64,{{ $article->user->profile_image }}" style="width:70px;">
         @endif
       </a>
       <div style="margin-left:8px;">

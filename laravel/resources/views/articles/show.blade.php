@@ -61,7 +61,7 @@
             @if(strpos($comments[$i]->profile_image,'http:') !== false)
             <img src="{{ $comments[$i]->profile_image }}" style="width:70px;">
             @else
-            <img src="{{ asset('storage/profiles/'.$comments[$i]->profile_image) }}" alt="プロフィール画像" style="width:70px;">
+            <img src="data:image/png;base64,{{ $comments[$i]->profile_image }}" style="width:70px;">
             @endif
             <a href="{{ route('users.show', ['name' => $comments[$i]->name]) }}" class="text-dark" >
             {{ $comments[$i]->nickname }}

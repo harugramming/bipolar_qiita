@@ -49,8 +49,8 @@ class UserController extends Controller
         $user = User::where('name', $name)->first();
 
         if($request->file('image')){
-            $path = $request->file('image')->store('public/profiles/');
-            $user->profile_image = basename($path);
+            $image = base64_encode(file_get_contents($request->file('image')->getRealPath()));
+            $user->profile_image = $image;
             $user->save();
         }
         User::where('name', $name)->update(['nickname' => $request->input('nickname')]);

@@ -14,7 +14,8 @@
             <input class="form-control" type="text" id="nickname" name="nickname" required value="{{ $user->nickname}}">
         </div>
         <div>
-            <input type="file" name="image">
+            <label for="file" class="filelabel">プロフィール画像を更新</label>
+            <input type="file" name="image" id="file" class="fileinput">
         </div>
         <div class="md-form">
             <label for="profile_text">自己紹介文</label>

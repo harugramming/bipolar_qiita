@@ -144,6 +144,22 @@ body{
             }
         }
     }
+    .filelabel{
+        display: inline-block;
+        position: relative;
+        background-color: #1877F2;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.5s;
+      }
+      .filelabel:hover{
+        background-color: #004db1;
+      }
+      .fileinput{
+        display: none;
+      }
     footer{
         color: #ffffff;
         background-color: #3D4040;

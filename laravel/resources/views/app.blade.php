@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head　prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
-    <meta property="og:url" content="http://bipolartips.herokuapp.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="bipolarTips - 双極性障害の方のための知識共有サービス" />
-    <meta property="og:description" content="bipolarTipsは双極性障害の方向けの知識共有サービスです。知識を共有することで、双極性障害の方の幸せで健康的な生活を実現するためのサービスです。" />
-    <meta property="og:site_name" content="bipolarTips - 双極性障害の方のための知識共有サービス" />
-    <meta property="og:image" content="images/facebook_cover_photo_2.png" />
-    <!-- ※Twitter共通設定 -->
-<meta name="twitter:card" content="summary_large_image"/>
-  <meta charset="utf-8">
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta content="bipolarTipsは双極性障害の方向けの知識共有サービスです。双極性障害の症状を上手くコントロールするための療法や心構え、また利用できる社会制度などの知識をみんなが共有できる状態にしたい。それによって、双極性障害の方の幸せで健康的な生活を実現したい。そんな想いで開発をしたのがbipolarTipsです。" name="description">

@@ -131,6 +131,11 @@ body .welcome .welcome-inner-discription {
   line-height: 2;
 }
 
+body _:lang(x) + _:-webkit-full-screen-document,
+body .welcome {
+  background-image: none;
+}
+
 body .register-container {
   min-height: 100vh;
 }

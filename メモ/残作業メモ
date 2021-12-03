@@ -3,3 +3,6 @@
 公開後
 ・OGPの設定
 ・Stripe決済
+・モバイル対応Safari
+・非ログイン、ユーザページ
+・heroku SQL打ち込み

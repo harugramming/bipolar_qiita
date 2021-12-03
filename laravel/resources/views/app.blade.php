@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head　prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
+    <meta property="og:url" content="http://bipolartips.herokuapp.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="bipolarTips - 双極性障害の方のための知識共有サービス" />
+    <meta property="og:description" content="bipolarTipsは双極性障害の方向けの知識共有サービスです。知識を共有することで、双極性障害の方の幸せで健康的な生活を実現するためのサービスです。" />
+    <meta property="og:site_name" content="bipolarTips - 双極性障害の方のための知識共有サービス" />
+    <meta property="og:image" content="images/logo.png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">

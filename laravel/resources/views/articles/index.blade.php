@@ -68,6 +68,7 @@
     <button>もっと見る</button>
 　</div>
 <div class="fundraising-container">
+    <p>※ 現在は募金機能は停止しています。</p>
     <p>募金にご協力お願いします！</p>
     <p>運営を継続するために、。。</p>
     <p>一口 420円です！</p>
